@@ -12,6 +12,13 @@ RESPONSES = { 'goodbye' => 'bye',
               'the weather is (.*)' => 'I hate it when it\'s %{c1}', 
               'I love (.*)' => 'I love %{c1} too', 
               'I groove to (.*) and (.*)' => 'I love %{c1} but I hate %{c2}',
+          	  'I like cake' => 'what type?',
+          	  'What is your name?' => 'My name is Bot',
+          	  'What language do you speak?' => 'I speak Ruby',
+          	  'What do you like to do?' => 'I like to code',
+          	  'You\'re not much fun are you?' => 'And you are?',
+          	  'Do you play (.*)?' => 'I love to play %{c1}!',
+          	  'I support (.*), I don\'t like (.*) or (.*)!' => 'Who are %{c1}? I like %{c2} but I don\'t like %{c3}',
 			}
 
 puts "Hello, what's your name?"
