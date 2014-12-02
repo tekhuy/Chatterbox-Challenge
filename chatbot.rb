@@ -1,5 +1,8 @@
 def get_response(input)
 
+if input == "quit"
+	exit
+else
   key = RESPONSES.keys.select {|k| /#{k}/ =~ input }.sample
   /#{key}/ =~ input
   response = RESPONSES[key]
