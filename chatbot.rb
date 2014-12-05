@@ -1,3 +1,5 @@
+require 'colorize'
+
 def get_response(input)
 
 if input == "quit"
@@ -24,8 +26,8 @@ RESPONSES = { 'goodbye' => 'bye',
           	  'I support (.*), I don\'t like (.*) or (.*)!' => 'Who are %{c1}? I like %{c2} but I don\'t like %{c3}',
 			}
 
-@bot = 'bot: '
-@human = 'human: '
+@bot = 'bot: '.red
+@human = 'human: '.magenta
 puts @bot + "Hello, what's your name?"
 print @human
 name = gets.chomp
