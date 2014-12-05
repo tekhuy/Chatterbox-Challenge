@@ -8,9 +8,21 @@ else
   key = RESPONSES.keys.select {|k| /#{k}/ =~ input }.sample
   /#{key}/ =~ input
   response = RESPONSES[key]
-  response.nil? ? 'sorry?' : response % { c1: $1, c2: $2, c3: $3}
+  response.nil? ? get_schooled(input) : response % { c1: $1, c2: $2, c3: $3}
 end
 end
+
+def get_schooled(input)
+  print "what would you like me to learn?".green 
+  teach = gets.chomp
+  learn(teach, input)
+end
+
+def learn(input, teach)
+  RESPONSES[teach] = input
+end
+
+
 
 RESPONSES = { 'goodbye' => 'bye', 
               'sayonara' => 'sayonara', 
