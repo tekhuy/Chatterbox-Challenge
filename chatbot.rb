@@ -24,9 +24,15 @@ RESPONSES = { 'goodbye' => 'bye',
           	  'I support (.*), I don\'t like (.*) or (.*)!' => 'Who are %{c1}? I like %{c2} but I don\'t like %{c3}',
 			}
 
-puts "Hello, what's your name?"
+@bot = 'bot: '
+@human = 'human: '
+puts @bot + "Hello, what's your name?"
+print @human
 name = gets.chomp
-puts "Hello #{name}"
+puts @bot + "Hello #{name}"
+print @human
 while(input = gets.chomp) do
+  print @bot
   puts get_response(input)
+  print @human
 end
