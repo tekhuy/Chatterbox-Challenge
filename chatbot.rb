@@ -13,8 +13,8 @@ end
 end
 
 def get_schooled(input)
-  print "what would you like me to learn?".green 
-  teach = gets.chomp
+  print "what would you like me to learn?"
+  teach = gets.chomp || RESPONSES
   learn(teach, input)
 end
 
@@ -39,7 +39,7 @@ RESPONSES = { 'goodbye' => 'bye',
 			}
 
 @bot = 'bot: '.red
-@human = 'human: '.magenta
+@human = 'human: '.green
 puts @bot + "Hello, what's your name?"
 print @human
 name = gets.chomp
@@ -50,3 +50,4 @@ while(input = gets.chomp) do
   puts get_response(input)
   print @human
 end
+
